@@ -27,10 +27,8 @@
           <div class="slider d-flex align-items-center">
             <img v-for="(image, index) in images" class="img-fluid" v-if=" isActive(index)" :src="image"  alt="" />
             <div class="slider-dots">
-              <div id="dot1" class="dot mx-2 active" @click="getPicture()"></div>
-              <div id="dot2" class="dot mx-2"  @click="getPicture(1)"></div>
-              <div id="dot3" class="dot mx-2"  @click="getPicture(2)"></div>
-              <div id="dot4" class="dot mx-2"  @click="getPicture(3)"></div>
+              <div v-for='(image, index) in images' class="dot mx-2" @click="getPicture(index)"></div>
+              
             </div>
           </div>
         </div>

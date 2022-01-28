@@ -43,8 +43,8 @@ const app = new Vue({
                 return this.currentId--;
             }
         },
-        getPicture(){
-            return this.currentId === 0;
+        getPicture(index){
+            this.currentId = index;
         }
     }
 });
